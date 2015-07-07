@@ -1,0 +1,28 @@
+{
+    "name": "turanct/dead-mans-twitch",
+    "description": "Get notified of people unfollowing you on twitter",
+    "type": "application",
+    "homepage": "http://github.com/turanct/dead-mans-twitch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toon Daelman",
+            "email": "spinnewebber_toon@hotmail.com",
+            "homepage": "http://turanct.wordpress.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
