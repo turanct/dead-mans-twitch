@@ -4,17 +4,19 @@ namespace Twitch;
 
 final class Follower
 {
+    private $id;
     private $screenName;
     private $realName;
 
-    public function __construct(ScreenName $screenName, RealName $realName)
+    public function __construct(UserId $id, ScreenName $screenName, RealName $realName)
     {
+        $this->id = $id;
         $this->screenName = $screenName;
         $this->realName = $realName;
     }
 
     public function equals(Follower $other)
     {
-        return $this->screenName->equals($other->screenName);
+        return $this->id->equals($other->id);
     }
 }
