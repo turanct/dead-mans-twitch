@@ -13,6 +13,7 @@
         }
     ],
     "require": {
+        "zendframework/zendservice-twitter": "2.1.*@dev"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0"
