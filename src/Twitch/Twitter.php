@@ -12,4 +12,13 @@ interface Twitter
      * @return UserId[]
      */
     public function getFollowersOf(ScreenName $screenName);
+
+    /**
+     * Get a Follower's profile by id
+     *
+     * @param UserId $id The id of the follower
+     *
+     * @return Follower
+     */
+    public function getFollowerById(UserId $id);
 }
