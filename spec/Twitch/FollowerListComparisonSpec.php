@@ -4,9 +4,7 @@ namespace spec\Twitch;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Twitch\Follower;
-use Twitch\ScreenName;
-use Twitch\RealName;
+use Twitch\UserId;
 
 class FollowerListComparisonSpec extends ObjectBehavior
 {
@@ -57,35 +55,35 @@ class FollowerListComparisonSpec extends ObjectBehavior
     private function getFooList()
     {
         return array(
-            new Follower(new ScreenName('@foo'), new RealName('Foo')),
+            new UserId('foo'),
         );
     }
     private function getBarList()
     {
         return array(
-            new Follower(new ScreenName('@bar'), new RealName('Bar')),
+            new UserId('bar'),
         );
     }
     private function getFooBarList()
     {
         return array(
-            new Follower(new ScreenName('@foo'), new RealName('Foo')),
-            new Follower(new ScreenName('@bar'), new RealName('Bar')),
+            new UserId('foo'),
+            new UserId('bar'),
         );
     }
     private function getFooBarBazList()
     {
         return array(
-            new Follower(new ScreenName('@foo'), new RealName('Foo')),
-            new Follower(new ScreenName('@bar'), new RealName('Bar')),
-            new Follower(new ScreenName('@baz'), new RealName('Baz')),
+            new UserId('foo'),
+            new UserId('bar'),
+            new UserId('baz'),
         );
     }
     private function getBazQuxList()
     {
         return array(
-            new Follower(new ScreenName('@baz'), new RealName('Baz')),
-            new Follower(new ScreenName('@qux'), new RealName('Qux')),
+            new UserId('baz'),
+            new UserId('qux'),
         );
     }
 }
