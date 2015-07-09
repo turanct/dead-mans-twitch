@@ -1,6 +1,6 @@
 <?php
 
-namespace Twitch;
+namespace Twitch\Service;
 
 use Twitch\Follower\Follower;
 use Twitch\Follower\UserId;
