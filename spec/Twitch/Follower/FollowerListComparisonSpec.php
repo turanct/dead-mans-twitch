@@ -1,16 +1,16 @@
 <?php
 
-namespace spec\Twitch;
+namespace spec\Twitch\Follower;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Twitch\UserId;
+use Twitch\Follower\UserId;
 
 class FollowerListComparisonSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Twitch\FollowerListComparison');
+        $this->shouldHaveType('Twitch\Follower\FollowerListComparison');
     }
 
     function it_returns_empty_list_when_nothing_to_compare()

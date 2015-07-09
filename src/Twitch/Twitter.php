@@ -2,6 +2,9 @@
 
 namespace Twitch;
 
+use Twitch\Follower\UserId;
+use Twitch\Follower\ScreenName;
+
 interface Twitter
 {
     /**

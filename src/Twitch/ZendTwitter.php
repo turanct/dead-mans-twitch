@@ -2,7 +2,12 @@
 
 namespace Twitch;
 
-final class ZendTwitter
+use Twitch\Follower\Follower;
+use Twitch\Follower\UserId;
+use Twitch\Follower\ScreenName;
+use Twitch\Follower\RealName;
+
+final class ZendTwitter implements Twitter
 {
     private $twitter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Twitch;
+namespace Twitch\Follower;
 
 final class Follower
 {
