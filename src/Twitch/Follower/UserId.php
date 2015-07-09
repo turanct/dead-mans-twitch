@@ -2,8 +2,6 @@
 
 namespace Twitch\Follower;
 
-use InvalidArgumentException;
-
 final class UserId
 {
     private $id;
