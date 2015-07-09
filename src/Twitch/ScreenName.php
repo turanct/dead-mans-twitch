@@ -26,4 +26,9 @@ final class ScreenName
     {
         return mb_strtolower($this->name) == mb_strtolower($otherName->name);
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

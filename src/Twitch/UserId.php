@@ -17,5 +17,9 @@ final class UserId
     {
         return $this->id === $otherId->id;
     }
-}
 
+    public function __toString()
+    {
+        return $this->id;
+    }
+}
