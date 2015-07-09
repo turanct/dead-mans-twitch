@@ -2,7 +2,7 @@
 
 namespace Twitch;
 
-class FollowerListComparison
+final class FollowerListComparison
 {
     public function diff(array $old, array $new)
     {
