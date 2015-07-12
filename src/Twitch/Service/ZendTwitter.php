@@ -2,6 +2,7 @@
 
 namespace Twitch\Service;
 
+use Twitch\Client\Twitter as TwitterClient;
 use Twitch\Follower\Follower;
 use Twitch\Follower\UserId;
 use Twitch\Follower\ScreenName;
@@ -11,7 +12,7 @@ final class ZendTwitter implements Twitter
 {
     private $twitter;
 
-    public function __construct(Client\Twitter $twitter)
+    public function __construct(TwitterClient $twitter)
     {
         $this->twitter = $twitter;
     }
