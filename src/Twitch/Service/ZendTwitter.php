@@ -41,7 +41,7 @@ final class ZendTwitter implements Twitter
         } while ($cursor != '0');
 
         return array_map(
-            function($id) {
+            function ($id) {
                 return new UserId($id);
             },
             $followerIds
