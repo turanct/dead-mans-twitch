@@ -16,6 +16,7 @@
         "zendframework/zendservice-twitter": "2.1.*@dev"
     },
     "require-dev": {
+        "zerkalica/phpcs": "dev-master",
         "phpspec/phpspec": "~2.0"
     },
     "config": {
