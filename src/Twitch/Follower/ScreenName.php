@@ -2,8 +2,6 @@
 
 namespace Twitch\Follower;
 
-use InvalidArgumentException;
-
 final class ScreenName
 {
     private $name;
@@ -18,7 +16,7 @@ final class ScreenName
     private function assertBeginsWithAtSign($name)
     {
         if (strpos($name, '@') !== 0) {
-            throw new InvalidArgumentException('Screennames should begin with @');
+            throw new ScreenNameShouldBeginWithAt($name);
         }
     }
 

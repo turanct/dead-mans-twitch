@@ -16,7 +16,9 @@ class ScreenNameSpec extends ObjectBehavior
 
     function it_should_begin_with_an_at_sign()
     {
-        $this->shouldThrow('InvalidArgumentException')->during__construct('foobar');
+        $this
+            ->shouldThrow('Twitch\\Follower\\ScreenNameShouldBeginWithAt')
+            ->during__construct('foobar');
     }
 
     function it_can_be_compared_for_equality()
