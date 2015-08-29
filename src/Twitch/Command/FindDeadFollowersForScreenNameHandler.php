@@ -39,5 +39,7 @@ final class FindDeadFollowersForScreenNameHandler
         foreach ($diffList as $followerId) {
             $this->eventstore->push(new UserWasUnfollowed($screenName, $followerId));
         }
+
+        $this->repository->storeFollowersOf($screenName, $newFollowerList);
     }
 }

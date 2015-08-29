@@ -44,6 +44,9 @@ class FindDeadFollowersForScreenNameHandlerSpec extends ObjectBehavior
         $eventstore
             ->push(new UserWasUnfollowed($screenName, $removedFollower))
             ->shouldBeCalled();
+        $repository
+            ->storeFollowersOf($screenName, $newFollowerList)
+            ->shouldBeCalled();
 
         $this->handle(new FindDeadFollowersForScreenName($screenName));
     }
@@ -61,6 +64,9 @@ class FindDeadFollowersForScreenNameHandlerSpec extends ObjectBehavior
         $repository->getFollowersOf($screenName)->willReturn($followerList);
         $twitter->getFollowersOf($screenName)->willReturn($followerList);
         $eventstore->push()->shouldNotBeCalled();
+        $repository
+            ->storeFollowersOf($screenName, $followerList)
+            ->shouldBeCalled();
 
         $this->handle(new FindDeadFollowersForScreenName($screenName));
     }
