@@ -39,4 +39,20 @@ class UserWasUnfollowedSpec extends ObjectBehavior
         $this->getDate()->modify('+1 day');
         $this->getDate()->shouldBeLike($date);
     }
+
+    function it_can_be_serialized_to_a_json_string()
+    {
+        $screenName = new ScreenName('@foobar');
+        $followerId = new UserId('1234');
+        $date = new DateTime('now');
+
+        $this->beConstructedWith($screenName, $followerId, $date);
+
+        $this->toJson()->shouldReturn(json_encode(array(
+            'event' => 'Twitch\\Follower\\UserWasUnfollowed',
+            'date' => $date->format('U'),
+            'screenName' => (string) $screenName,
+            'followerId' => (string) $followerId,
+        )));
+    }
 }

@@ -39,4 +39,16 @@ final class UserWasUnfollowed implements Event
     {
         return clone $this->date;
     }
+
+    public function toJson()
+    {
+        $representation = array(
+            'event' => __CLASS__,
+            'date' => $this->date->format('U'),
+            'screenName' => (string) $this->screenName,
+            'followerId' => (string) $this->followerId,
+        );
+
+        return json_encode($representation);
+    }
 }
