@@ -19,6 +19,7 @@ class UserWasUnfollowedSpec extends ObjectBehavior
         );
 
         $this->shouldHaveType('Twitch\Follower\UserWasUnfollowed');
+        $this->shouldImplement('Twitch\Event\Event');
     }
 
     function it_has_properties_we_can_get_but_not_mutate()

@@ -2,9 +2,10 @@
 
 namespace Twitch\Follower;
 
+use Twitch\Event\Event;
 use DateTime;
 
-final class UserWasUnfollowed
+final class UserWasUnfollowed implements Event
 {
     private $screenName;
     private $followerId;

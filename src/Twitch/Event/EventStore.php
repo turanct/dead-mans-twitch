@@ -7,9 +7,9 @@ interface EventStore
     /**
      * Push an event to the event store
      *
-     * @param mixed $event The event
+     * @param Event $event The event
      */
-    public function push($event);
+    public function push(Event $event);
 
     /**
      * Get all events from the store
