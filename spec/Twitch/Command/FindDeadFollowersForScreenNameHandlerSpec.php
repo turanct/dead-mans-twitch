@@ -9,9 +9,9 @@ use Twitch\Follower\UserId;
 use Twitch\Follower\ScreenName;
 use Twitch\Follower\Repository;
 use Twitch\Follower\FollowerListComparison;
-use Twitch\Follower\EventStore;
 use Twitch\Follower\UserWasUnfollowed;
 use Twitch\Command\FindDeadFollowersForScreenName;
+use Twitch\Event\EventStore;
 
 class FindDeadFollowersForScreenNameHandlerSpec extends ObjectBehavior
 {

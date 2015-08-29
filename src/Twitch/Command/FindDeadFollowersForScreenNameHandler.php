@@ -5,8 +5,8 @@ namespace Twitch\Command;
 use Twitch\Service\Twitter;
 use Twitch\Follower\Repository;
 use Twitch\Follower\FollowerListComparison;
-use Twitch\Follower\EventStore;
 use Twitch\Follower\UserWasUnfollowed;
+use Twitch\Event\EventStore;
 
 final class FindDeadFollowersForScreenNameHandler
 {
