@@ -1,11 +1,8 @@
 <?php
 
-namespace Twitch\Command;
+namespace Twitch\Follower;
 
 use Twitch\Service\Twitter;
-use Twitch\Follower\Repository;
-use Twitch\Follower\FollowerListComparison;
-use Twitch\Follower\UserWasUnfollowed;
 use Twitch\Event\EventStore;
 
 final class FindDeadFollowersForScreenNameHandler

@@ -1,8 +1,6 @@
 <?php
 
-namespace Twitch\Command;
-
-use Twitch\Follower\ScreenName;
+namespace Twitch\Follower;
 
 final class FindDeadFollowersForScreenName
 {

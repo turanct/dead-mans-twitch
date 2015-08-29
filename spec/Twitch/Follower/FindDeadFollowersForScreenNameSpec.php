@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Twitch\Command;
+namespace spec\Twitch\Follower;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -11,7 +11,7 @@ class FindDeadFollowersForScreenNameSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->beConstructedWith(new ScreenName('@foobar'));
-        $this->shouldHaveType('Twitch\Command\FindDeadFollowersForScreenName');
+        $this->shouldHaveType('Twitch\Follower\FindDeadFollowersForScreenName');
     }
 
     function it_does_nothing_only_returns_screen_name()

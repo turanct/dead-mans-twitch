@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Twitch\Command;
+namespace spec\Twitch\Follower;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -10,7 +10,7 @@ use Twitch\Follower\ScreenName;
 use Twitch\Follower\Repository;
 use Twitch\Follower\FollowerListComparison;
 use Twitch\Follower\UserWasUnfollowed;
-use Twitch\Command\FindDeadFollowersForScreenName;
+use Twitch\Follower\FindDeadFollowersForScreenName;
 use Twitch\Event\EventStore;
 
 class FindDeadFollowersForScreenNameHandlerSpec extends ObjectBehavior
@@ -22,7 +22,7 @@ class FindDeadFollowersForScreenNameHandlerSpec extends ObjectBehavior
     ) {
         $comparison = new FollowerListComparison;
         $this->beConstructedWith($twitter, $repository, $comparison, $eventstore);
-        $this->shouldHaveType('Twitch\Command\FindDeadFollowersForScreenNameHandler');
+        $this->shouldHaveType('Twitch\Follower\FindDeadFollowersForScreenNameHandler');
     }
 
     function it_should_publish_events_when_new_unfollowers(
