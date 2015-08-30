@@ -14,7 +14,7 @@ interface EventStore
     /**
      * Get all events from the store
      *
-     * @return mixed[] An array of events
+     * @return Event[] An array of events
      */
     public function getAll();
 }
